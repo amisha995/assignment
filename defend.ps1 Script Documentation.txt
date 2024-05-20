@@ -1,0 +1,34 @@
+defend.ps1 Script Documentation
+
+Introduction
+The defend.ps1 script is designed to restrict internet access for admin accounts using a dummy proxy, as recommended by CIS 12.8 Network Infrastructure Management.
+
+Functionality
+Test-InternetAccess: Checks internet access by making a request to a sample webpage.
+Enable-RestrictInternet: Restricts internet access by setting a dummy proxy.
+Reset-RestrictInternet: Resets internet access by removing the dummy proxy.
+
+Usage
+The script accepts command-line arguments to execute different functions:
+
+To test internet access: .\defend.ps1 testInternetAccess
+To enable internet restriction: .\defend.ps1 enableRestrictInternet
+To reset internet restriction: .\defend.ps1 resetRestrictInternet
+Dependencies
+PowerShell 5.1 or later
+Internet access to perform tests
+
+Example
+
+# Test internet access
+.\defend.ps1 testInternetAccess
+
+# Enable internet restriction
+.\defend.ps1 enableRestrictInternet
+
+# Reset internet restriction
+.\defend.ps1 resetRestrictInternet
+
+Notes
+Ensure that the script is executed with administrative privileges.
+Make sure to review and customize the script according to your environment and requirements.
